@@ -1,0 +1,13 @@
+var age = 32;
+console.log(typeof age);
+var price = 34.689;
+console.log(price,typeof price);
+var firstname = "Datta";
+console.log(typeof firstname);
+var city ='pune';
+console.log("city==>",city," data type =>",typeof city);
+var ismarried = true;
+console.log(typeof ismarried);
+var ishandicap = false;
+console.log(ishandicap,typeof(ishandicap));
+console.log(typeof"i love only js");
