@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Switcher</title>
+    <style>
+        
+        .colors{
+            width: 672px;
+    height: 430px;
+            border: 1px black;
+            position: absolute;
+            background-color: #fff;
+            top: 100px;
+            left: 5%;
+           
+        }
+        #Aqua
+        {
+            background-color: #7fffd4;  
+            width: 90px;
+            height: 89px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 20px;
+            cursor: pointer;
+           
+        }
+        #dark-gray
+        {
+            background-color: #4d4c4c;  
+            width: 90px;
+            height: 89px;
+            border-radius: 50%; 
+            display: inline-block;
+            margin: 20px;
+            cursor: pointer;
+          
+        }
+        #DarkSeaGreen
+        {
+
+            background-color:#8FBC8F;  
+            width: 90px;
+            height: 89px;
+            border-radius: 50%; 
+            display: inline-block;
+            margin: 20px;
+            cursor: pointer;
+        }
+        #MediumPurple
+        {
+            background-color:#9370DB;  
+            width: 90px;
+            height: 89px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 20px; 
+            cursor: pointer;
+        }
+        #LightGreen{
+            background-color:#90EE90;  
+            width: 90px;
+            height: 89px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 20px; 
+            cursor: pointer;
+        }
+
+
+
+        #Teal{
+            background-color:#008080;  
+            width: 90px;
+            height: 89px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 20px; 
+            cursor: pointer;
+        }
+        #Magenta
+        {
+            background-color:#FF00FF;  
+            width: 90px;
+            height: 89px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 20px; 
+            cursor: pointer;
+        }
+        #Orange
+       {
+            background-color: #FFA500;  
+            width: 90px;
+            height: 89px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 20px; 
+            cursor: pointer;
+        }
+        #RoyalBlue{
+            background-color: #4169E1;  
+            width: 90px;
+            height: 89px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 20px; 
+            cursor: pointer;
+        }
+        #YellowGreen{
+            background-color: #9ACD32;  
+            width: 90px;
+            height: 89px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 20px; 
+            cursor: pointer;
+        }
+
+
+
+
+        #OrangeRed
+           
+        {
+            background-color: #FF4500;  
+            width: 90px;
+            height: 89px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 20px;
+            cursor: pointer;
+        }
+        #Maroon
+         
+        {
+            background-color:   #800000;  
+            width: 90px;
+            height: 89px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 20px;
+            cursor: pointer;
+           
+        }
+        #LawnGreen
+           
+        {
+            background-color:#7CFC00;  
+            width: 90px;
+            height: 89px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 20px;
+            cursor: pointer;
+           
+        }
+        #Indigo
+          
+        {
+            background-color:  #4B0082;  
+            width: 90px;
+            height: 89px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 20px;
+           cursor: pointer;
+        }
+        
+        #Crimson
+          
+        {
+            background-color: #DC143C;  
+            width: 90px;
+            height: 89px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 20px;
+           cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    
+         
+    <div class="colors container-fluid">
+        <div> 
+     <div class="clickcolors" id="Aqua" onclick="getColor()" ></div>
+     <div class="clickcolors" id="DarkSeaGreen"></div>
+     <div class="clickcolors"id="MediumPurple"></div>
+     <div class="clickcolors" id="dark-gray"></div>
+    <div class="clickcolors" id="LightGreen"></div>
+
+    </div>
+    <br>
+    <div> 
+        <div class="clickcolors" id="YellowGreen"></div>
+        <div class="clickcolors" id="Teal"></div>
+        <div class="clickcolors"id="Magenta"></div>
+        <div class="clickcolors" id="Orange"></div>
+       <div class="clickcolors" id="RoyalBlue"></div>
+   
+       </div>
+   
+       <br>
+       <div> 
+           <div class="clickcolors" id="OrangeRed"></div>
+           <div class="clickcolors" id="Maroon"></div>
+           <div class="clickcolors"id="LawnGreen"></div>
+           <div class="clickcolors" id="Indigo"></div>
+          <div class="clickcolors" id="Crimson"></div>
+      
+          </div>
+
+
+    </div>
+</div>
+<script>
+
+    let clickcolors=document.querySelectorAll(".clickcolors");
+    const body = document.querySelector("body");
+    clickcolors.forEach(function(button){
+
+    button.addEventListener("click", function(e){
+        console.log(e.target);
+//When you select that color, that color will appear in the webpage.
+        if (e.target.id === "Aqua"){
+            body.style.backgroundColor = e.target.id;
+            
+        }
+        if (e.target.id === "DarkSeaGreen"){
+            body.style.backgroundColor = e.target.id;
+        }
+        if (e.target.id === "MediumPurple"){
+            body.style.backgroundColor = e.target.id;
+        }
+        if (e.target.id === "dark-gray"){
+            body.style.backgroundColor = e.target.id;
+        }
+        if (e.target.id === "LightGreen"){
+            body.style.backgroundColor = e.target.id;
+        }
+        if (e.target.id === "YellowGreen"){
+            body.style.backgroundColor = e.target.id;
+        }
+        if (e.target.id === "Magenta"){
+            body.style.backgroundColor = e.target.id;
+        }
+        if (e.target.id === "Orange"){
+            body.style.backgroundColor = e.target.id;
+        }
+        if (e.target.id === "RoyalBlue"){
+            body.style.backgroundColor = e.target.id;
+        }
+        if (e.target.id === "OrangeRed"){
+            body.style.backgroundColor = e.target.id;
+        }
+        if (e.target.id === "Maroon"){
+            body.style.backgroundColor = e.target.id;
+        }
+        if (e.target.id === "LawnGreen"){
+            body.style.backgroundColor = e.target.id;
+        }
+        if (e.target.id === "Indigo"){
+            body.style.backgroundColor = e.target.id;
+        }
+        if (e.target.id === "Crimson"){
+            body.style.backgroundColor = e.target.id;
+        }
+    })
+})
+
+</script>
+</body>
+
+</html>
